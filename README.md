@@ -1,8 +1,10 @@
 # Gaussian Blur FPGA Project
 
 This project implements a real-time Gaussian Blur filter on the PYNQ-Z2 FPGA board using a custom HLS IP.
+
 ![Block Diagram](images/Block_Design.png)
-![My Rover](images/1.jpg)
+
+jpg
 
 ## Repository Structure
 - **BlockDesign/**: Vivado project and block design files.
