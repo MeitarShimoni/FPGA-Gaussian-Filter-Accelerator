@@ -1,4 +1,4 @@
-# Gaussian Blur FPGA Project
+# Image Processing Filter Acceleration FPGA Project
 
 This project implements a real-time Gaussian Blur filter using a custom-designed HLS IP on the PYNQ-Z2 FPGA board.  
 The system is fully AXI4-Stream compatible and integrates with DMA and HDMI interfaces.
