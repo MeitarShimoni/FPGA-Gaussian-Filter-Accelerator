@@ -59,7 +59,7 @@ This section will include:
 
 ## 👤 Author
 
-- Meita Shimony
+- Meitar Shimoni
 
 ---
 
