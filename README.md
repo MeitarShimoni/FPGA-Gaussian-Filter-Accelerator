@@ -52,7 +52,7 @@ This section will include:
 
 - Vivado 2022.1
 - Vitis HLS 2022.1
-- PYNQ 2.7
+- PYNQ 2.7 image
 - PYNQ-Z2 FPGA Board
 
 ---
