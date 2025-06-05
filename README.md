@@ -20,7 +20,7 @@ The following figure shows the system pipeline implemented in Vivado Block Desig
 ---
 ## ✨ Filter Descriptions & Results
 
-###🔹 **Gaussian Blur Filter**
+### 🔹 **Gaussian Blur Filter**
 The Gaussian Blur is a low-pass filter used to smooth images and reduce noise by averaging pixel values using a weighted 3×3 kernel. This filter is useful for preprocessing before edge detection or reducing image detail.
 Functional Highlights:
 - Operates on 8-bit grayscale pixels
@@ -31,7 +31,7 @@ Functional Highlights:
 ### C Simulation Results:
 ![Block Diagram](images/gaussian_blur_4_6_25.png)
 
-###🔹 Sobel Edge Detection Filter
+### 🔹 Sobel Edge Detection Filter
 The Sobel filter highlights edges by computing the gradient magnitude in both the horizontal and vertical directions. It is effective in detecting contours and transitions in intensity.
 
 Functional Highlights:
