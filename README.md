@@ -29,7 +29,7 @@ Functional Highlights:
 - Streaming input/output via AXI4-Stream
 - Latency: ~80 ns | II = 1
 C Simulation Results:
-![Block Diagram](images/123.png)
+![Block Diagram](images/gaussian_blur_4_6_25.png)
 
 🔹 Sobel Edge Detection Filter
 The Sobel filter highlights edges by computing the gradient magnitude in both the horizontal and vertical directions. It is effective in detecting contours and transitions in intensity.
@@ -43,7 +43,7 @@ Functional Highlights:
 - ap_ctrl_none interface — runs without AXI4-Lite
 
 C Simulation Results:
-![Block Diagram](images/123.png)
+![Block Diagram](images/Sobel_4_6_25.png)
 
 ---
 ## 📈 Synthesis Report
