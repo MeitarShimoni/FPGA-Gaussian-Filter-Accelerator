@@ -20,7 +20,7 @@ The following figure shows the system pipeline implemented in Vivado Block Desig
 ---
 ## ✨ Filter Descriptions & Results
 
-🔹 Gaussian Blur Filter
+🔹 **Gaussian Blur Filter**
 The Gaussian Blur is a low-pass filter used to smooth images and reduce noise by averaging pixel values using a weighted 3×3 kernel. This filter is useful for preprocessing before edge detection or reducing image detail.
 Functional Highlights:
 - Operates on 8-bit grayscale pixels
