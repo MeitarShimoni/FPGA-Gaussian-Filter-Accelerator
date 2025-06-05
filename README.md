@@ -9,7 +9,7 @@ The system is fully AXI4-Stream compatible and integrates with DMA and HDMI inte
 
 The following figure shows the system pipeline implemented in Vivado Block Design:
 
-![Block Diagram](images/Block_Design.png)
+![Block Diagram](images/BlockDesign.png)
 
 **Pipeline Overview:**
 - The video stream is received through DMA or HDMI input.
