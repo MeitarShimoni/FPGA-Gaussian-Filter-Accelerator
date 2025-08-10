@@ -48,14 +48,14 @@ This diagram shows the Zynq PS, AXI DMA, Gaussian Filter IP, and video/GPIO peri
 
 
 **Visual Verification**  
-_Input to Simulation_  
+_Input and output of the Simulation_  
 ![Input Frame & output Frame](images/in_out_images.png)
 
 ---
 
 ## 🏗 Implementation Results
 **Device View (Post-Synthesis Layout)**  
-<!-- ![Device Layout](image_aa5988.png) -->
+![Device Layout](images/Device.png) 
 
 ---
 
@@ -67,7 +67,7 @@ _Input to Simulation_
 ---
 
 ## 🎯 System in Action
-<!-- ![Final HDMI Output](image_aa5d83.jpg) -->
+![Final HDMI Output](images/HDMI_output.jpg)
 
 ---
 
