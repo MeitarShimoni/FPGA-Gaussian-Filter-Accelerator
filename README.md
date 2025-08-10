@@ -1,95 +1,94 @@
-# Image Processing Filter Acceleration FPGA Project
+# Real-Time Video Processing TGP on PYNQ-Z2
 
-This project implements a real-time Gaussian Blur filter using a custom-designed HLS IP on the PYNQ-Z2 FPGA board.  
-The system is fully AXI4-Stream compatible and integrates with DMA and HDMI interfaces.
-
----
-
-## 🛠 Block Design
-
-The following figure shows the system pipeline implemented in Vivado Block Design:
-
-![Block Diagram](images/BlockDesign.png)
-
-**Pipeline Overview:**
-- The video stream is received through DMA or HDMI input.
-- Frames are passed pixel-by-pixel to the custom HLS Gaussian Blur IP.
-- The filtered video is sent to memory via DMA or to an HDMI output for real-time display.
-- All components communicate over AXI-Stream interfaces (TVALID, TREADY, TDATA, TUSER, TLAST).
-
----
-## ✨ Filter Descriptions & Results
-
-### 🔹 **Gaussian Blur Filter**
-The Gaussian Blur is a low-pass filter used to smooth images and reduce noise by averaging pixel values using a weighted 3×3 kernel. This filter is useful for preprocessing before edge detection or reducing image detail.
-Functional Highlights:
-- Operates on 8-bit grayscale pixels
-- Uses a 3×3 Gaussian kernel:
-- Normalized by 16
-- Streaming input/output via AXI4-Stream
-- Latency: ~80 ns | II = 1
-### C Simulation Results:
-![Block Diagram](images/gaussian_blur_4_6_25.png)
-
-### 🔹 Sobel Edge Detection Filter
-The Sobel filter highlights edges by computing the gradient magnitude in both the horizontal and vertical directions. It is effective in detecting contours and transitions in intensity.
-
-Functional Highlights:
-- 3×3 Sobel kernels (Gx and Gy)
-- Output is the magnitude of gradients: |Gx| + |Gy|
-- Normalized and thresholded to binary (0 or 255)
-- Threshold input is configurable (8-bit value via pin)
-- Latency: ~90 ns | II = 1
-- ap_ctrl_none interface — runs without AXI4-Lite
-
-### C Simulation Results:
-![Block Diagram](images/Sobel_4_6_25.png)
-
----
-## 📈 Synthesis Report
-
-The Gaussian Blur IP was synthesized using Vitis HLS 2022.1.
-
-![Synthesis](images/Synthesis.png)
-
-**Key Highlights:**
-- Fully pipelined implementation.
-- Initiation Interval (II) = 1 (one pixel per clock cycle).
-- Optimized for low resource utilization and real-time video processing.
-
-> *A full synthesis report will be added here in the future, including resource usage (LUTs, FFs, DSPs) and timing information.*
+This project implements a **real-time video processing system** inspired by an F-16's Targeting Pod (TGP).  
+It captures video from a USB camera, performs **hardware-accelerated filtering** on a PYNQ-Z2 FPGA, tracks objects via software algorithms, and displays the augmented video feed via HDMI.
 
 ---
 
-## 🎥 Jupyter Notebook Implementation (Coming Soon)
-
-In the next phase of the project, the system will be tested from a Jupyter Notebook running on the PYNQ board.
-
-This section will include:
-- Loading frames from camera or file.
-- Sending frames through the FPGA Gaussian Blur filter.
-- Capturing HDMI output screenshots.
-- Measuring real-time performance.
-
-> *Example screenshots of the HDMI output will be added here.*
+## 🚀 Key Features
+- **End-to-End Video Pipeline** – Capture, process, and display video in real-time.
+- **Hardware Acceleration** – Custom 3×3 Gaussian blur filter in RTL (Verilog) for high-throughput, low-latency processing.
+- **Software/Hardware Co-Design** – Zynq SoC with ARM PS running Python & PL doing pixel-intensive processing.
+- **Object Tracking** – Pyramidal Lucas-Kanade optical flow algorithm in OpenCV.
+- **AXI-Stream Protocol** – Efficient, backpressure-managed hardware pipeline.
+- **Interactive Control** – Onboard buttons/LEDs for live user interaction.
 
 ---
 
-## 📋 Requirements
-
-- Vivado 2022.1
-- Vitis HLS 2022.1
-- PYNQ 2.7 image
-- PYNQ-Z2 FPGA Board
-
----
-
-## 👤 Author
-
-- Meitar Shimoni
+## 🖥 System Architecture
+1. **Capture** – Python & OpenCV grab frames from USB camera.
+2. **Transfer to PL** – AXI DMA sends frames from DDR (PS) to custom filter IP (PL).
+3. **Hardware Filtering** – Gaussian 3×3 convolution applied pixel-by-pixel.
+4. **Transfer to PS** – Filtered frame returned via DMA.
+5. **Software Processing** – Lucas-Kanade tracking & TGP graphics overlay.
+6. **Display** – Augmented frames sent to HDMI output.
 
 ---
 
-## 📜 License
+## 🛠 Vivado Block Design
+This diagram shows the Zynq PS, AXI DMA, Gaussian Filter IP, and video/GPIO peripherals.
 
-This project is released under the MIT License.
+<!-- ![Vivado Block Design](image_aa5966.png) -->
+
+---
+
+## ⚙ Hardware Design (PL)
+- **3×3 Convolution with Line Buffers** – Previous two rows stored, plus shift registers for current row, enabling one pixel per clock throughput.
+- **RTL Verification** – Vivado Simulator checks AXI-Stream TVALID/TREADY handshake and TLAST frame boundaries.
+
+---
+
+## 📊 Simulation Results
+
+**Simulation Waveform (End-of-Frame)**  
+<!-- ![Simulation TLAST Waveform](image_aa5983.png) -->
+
+**Visual Verification**  
+_Input to Simulation_  
+<!-- ![Input Frame](image_aa59a1.png) -->
+
+_Output from Simulation_  
+<!-- ![Output Frame](image_aa59a4.png) -->
+
+---
+
+## 🏗 Implementation Results
+**Device View (Post-Synthesis Layout)**  
+<!-- ![Device Layout](image_aa5988.png) -->
+
+---
+
+## 💻 Software Design (PS)
+- **Control** – Python in Jupyter Notebook.
+- **Libraries** – `pynq` for hardware control, `cv2` for tracking & camera input.
+- **User Interface** – Onboard buttons via AXI GPIO for start/reset/stop.
+
+---
+
+## 🎯 System in Action
+<!-- ![Final HDMI Output](image_aa5d83.jpg) -->
+
+---
+
+## 📌 Getting Started
+1. Use a **PYNQ-Z2** board with latest PYNQ image.
+2. Clone this repository to the board.
+3. Connect a 1080p HDMI monitor and USB webcam.
+4. Open the `.ipynb` notebook in Jupyter Labs.
+5. Run all cells to start the application.
+
+---
+
+## 🔮 Future Work
+- Move entire pipeline to **hardware** to reduce latency.
+- Implement **advanced tracking algorithms** in PL.
+- Add **dynamic filter selection** from Python.
+
+---
+
+## 📋 Notes Table
+
+|   |   |   |   |
+|---|---|---|---|
+|   |   |   |   |
+|   |   |   |   |
