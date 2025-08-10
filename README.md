@@ -49,10 +49,10 @@ This diagram shows the Zynq PS, AXI DMA, Gaussian Filter IP, and video/GPIO peri
 
 **Visual Verification**  
 _Input to Simulation_  
-<!-- ![Input Frame](image_aa59a1.png) -->
+![Input Frame](images/input_image.bmp)
 
 _Output from Simulation_  
-<!-- ![Output Frame](image_aa59a4.png) -->
+![Output Frame](images/output_image.png)
 
 ---
 
