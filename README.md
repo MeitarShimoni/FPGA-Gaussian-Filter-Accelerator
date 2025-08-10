@@ -28,7 +28,7 @@ It captures video from a USB camera, performs **hardware-accelerated filtering**
 ## 🛠 Vivado Block Design
 This diagram shows the Zynq PS, AXI DMA, Gaussian Filter IP, and video/GPIO peripherals.
 
-<!-- ![Vivado Block Design](image_aa5966.png) -->
+![Vivado Block Design](images/BlockDesign.png) -->
 
 ---
 
