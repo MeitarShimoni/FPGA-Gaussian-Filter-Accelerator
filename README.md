@@ -47,6 +47,8 @@ This diagram shows the Zynq PS, AXI DMA, Gaussian Filter IP, and video/GPIO peri
 ![Simulation TLAST Waveform](images/end_frame_start_frame.png) 
 
 
+<img src="input_image2.png" alt="Input Frame" width="640" height="480"/>
+<img src="image_aa59a4.png" alt="Output Frame" width="640" height="480"/>
 
 **Visual Verification**  
 _Input to Simulation_  
