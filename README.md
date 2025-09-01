@@ -69,6 +69,8 @@ _Input and output of the Simulation_
 ## 🎯 System in Action
 ![Final HDMI Output](images/HDMI_output.jpg)
 
+![Demo](images/FPGA_Project.gif)
+
 ---
 
 ## 📌 Getting Started
@@ -93,3 +95,4 @@ _Input and output of the Simulation_
 |---|---|---|---|
 |   |   |   |   |
 |   |   |   |   |
+
