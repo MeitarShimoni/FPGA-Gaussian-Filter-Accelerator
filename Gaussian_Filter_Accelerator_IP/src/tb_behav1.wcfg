@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="70.600001 us"></ZoomEndTime>
+      <Cursor1Time time="19.405000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/rd_line_buffer" type="logic">
+      <obj_property name="ElementShortName">rd_line_buffer</obj_property>
+      <obj_property name="ObjectShortName">rd_line_buffer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/rdCounter" type="array">
+      <obj_property name="ElementShortName">rdCounter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdCounter[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lineCounter" type="array">
+      <obj_property name="ElementShortName">lineCounter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">lineCounter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/rdPntr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="label">lB0 rdPntr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB1/rdPntr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="label">lB1 rdPntr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB2/rdPntr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="label">lB2 rdPntr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB3/rdPntr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="label">lB3 rdPntr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/i_rd_data" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_rd_data</obj_property>
+      <obj_property name="ObjectShortName">i_rd_data</obj_property>
+      <obj_property name="label">lB0 i_rd_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB1/i_rd_data" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_rd_data</obj_property>
+      <obj_property name="ObjectShortName">i_rd_data</obj_property>
+      <obj_property name="label">lB1 i_rd_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB2/i_rd_data" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_rd_data</obj_property>
+      <obj_property name="ObjectShortName">i_rd_data</obj_property>
+      <obj_property name="label">lB2 i_rd_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB3/i_rd_data" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_rd_data</obj_property>
+      <obj_property name="ObjectShortName">i_rd_data</obj_property>
+      <obj_property name="label">lB3 i_rd_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/o_data_valid" type="logic">
+      <obj_property name="ElementShortName">o_data_valid</obj_property>
+      <obj_property name="ObjectShortName">o_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/o_data" type="array">
+      <obj_property name="ElementShortName">o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/currentWrLineBuffer" type="array">
+      <obj_property name="ElementShortName">currentWrLineBuffer[1:0]</obj_property>
+      <obj_property name="ObjectShortName">currentWrLineBuffer[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/o_data_valid" type="logic">
+      <obj_property name="ElementShortName">o_data_valid</obj_property>
+      <obj_property name="ObjectShortName">o_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/line" type="array">
+      <obj_property name="ElementShortName">line[639:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">line[639:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/wrPntr" type="array">
+      <obj_property name="ElementShortName">wrPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wrPntr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/lB0/rdPntr" type="array">
+      <obj_property name="ElementShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdPntr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/currentWrLineBuffer" type="array">
+      <obj_property name="ElementShortName">currentWrLineBuffer[1:0]</obj_property>
+      <obj_property name="ObjectShortName">currentWrLineBuffer[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/IC/o_last_pixel" type="logic">
+      <obj_property name="ElementShortName">o_last_pixel</obj_property>
+      <obj_property name="ObjectShortName">o_last_pixel</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/i_data_valid" type="logic">
+      <obj_property name="ElementShortName">i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">i_data_valid</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/o_data_valid" type="logic">
+      <obj_property name="ElementShortName">o_data_valid</obj_property>
+      <obj_property name="ObjectShortName">o_data_valid</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/i_data_ready" type="logic">
+      <obj_property name="ElementShortName">i_data_ready</obj_property>
+      <obj_property name="ObjectShortName">i_data_ready</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/o_data" type="array">
+      <obj_property name="ElementShortName">o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[7:0]</obj_property>
+   </wvobject>
+</wave_config>
