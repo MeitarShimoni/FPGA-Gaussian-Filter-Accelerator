@@ -1,5 +1,5 @@
 # Real-Time Video Processing TGP on PYNQ-Z2
-
+![Demo](images/FPGA_Project.gif)
 This project implements a **real-time video processing system** inspired by an F-16's Targeting Pod (TGP).  
 It captures video from a USB camera, performs **hardware-accelerated filtering** on a PYNQ-Z2 FPGA, tracks objects via software algorithms, and displays the augmented video feed via HDMI.
 
@@ -69,7 +69,6 @@ _Input and output of the Simulation_
 ## 🎯 System in Action
 ![Final HDMI Output](images/HDMI_output.jpg)
 
-![Demo](images/FPGA_Project.gif)
 
 ---
 
