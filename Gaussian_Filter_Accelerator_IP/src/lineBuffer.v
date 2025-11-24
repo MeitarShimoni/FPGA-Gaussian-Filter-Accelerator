@@ -7,7 +7,7 @@ module lineBuffer(
     input           i_data_valid,
     output  [7:0]   o_data,
     input           i_rd_data
-); // <--- THIS SEMICOLON IS CRITICAL. Ensure it is present.
+); 
 
     // Memory for one line of 640 pixels
     reg [7:0] line [639:0];
